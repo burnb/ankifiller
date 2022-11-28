@@ -1,0 +1,13 @@
+anki:
+  deck: Personal # required
+  image_definition_field: Eng # required
+  image_field: Image # optional leave it empty in case if you don't want to generate
+  phonemic_definition_field: Thai # required
+  phonemic_field: Phonemic # optional leave it empty in case if you don't want to generate
+phonemic: # optional leave it empty in case if you don't want to generate (currently support only th-TH paiboon phonemic transcription)
+  locale: th-TH # required
+  system: paiboon # required
+google_custom_search: # optional https://developers.google.com/custom-search/v1/overview
+  api_key: { Google Custom Search API Key } # required
+  cx: { The identifier of the Programmable Search Engine } # required
+  gl: { Geolocation of end user query param } # optional https://developers.google.com/custom-search/v1/reference/rest/v1/cse/list
