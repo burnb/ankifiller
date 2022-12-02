@@ -88,6 +88,6 @@ func (c *App) Prepare() (err error) {
 }
 
 func (c *App) printUsage() {
-	fmt.Println("\nUsage: ankifiller [OPTIONS]\n\nOptions:")
+	fmt.Println("\nUsage: ankifiller [OPTIONS]\nFill your language cards with auto-generated data\n\nOptions:")
 	c.flagSet.PrintDefaults()
 }

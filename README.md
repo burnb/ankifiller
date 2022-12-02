@@ -15,6 +15,7 @@ Look at the [config.yml.example](./config.yml.example)
 ### Usage
 ```
 Usage: ankifiller [OPTIONS]
+Fill your language cards with auto-generated data
 
 Options:
   -h, --help            Show this help message and exit
