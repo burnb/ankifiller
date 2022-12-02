@@ -94,8 +94,13 @@ func (s *Service) Transcript(definition string) string {
 			continue
 		}
 
-		word := runesDef[i-m.idx : i]
-		out = append(out, s.data[string(word)])
+		sentence := strings.Replace(string(runesDef[i-m.idx:i]), " ", "", -1)
+		sentenceTr, ok := s.data[sentence]
+		if !ok {
+			sentenceTr = sentence
+		}
+		out = append(out, sentenceTr)
+
 		i -= m.idx
 	}
 
@@ -138,7 +143,7 @@ func (s *Service) getWordCost(word string) float64 {
 		return v
 	}
 
-	return 10000000
+	return 9e99
 }
 
 func minCost(matchs []*match) (*match, error) {
